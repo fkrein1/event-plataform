@@ -4,7 +4,7 @@ import { Event } from './pages/Event';
 function App() {
   return (
     <Routes>
-      <Route path="/event" element={ <Event />} />
+      <Route path="/" element={ <Event />} />
       <Route path="/event/lesson/:slug" element={ <Event />} />
     </Routes>
   )
