@@ -1,9 +1,12 @@
-import { gql, useQuery } from '@apollo/client';
+import { Route, Routes } from 'react-router-dom';
 import { Event } from './pages/Event';
 
 function App() {
   return (
-    <Event />
+    <Routes>
+      <Route path="/event" element={ <Event />} />
+      <Route path="/event/lesson/:slug" element={ <Event />} />
+    </Routes>
   )
 }
 
