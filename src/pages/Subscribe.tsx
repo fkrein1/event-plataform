@@ -1,13 +1,16 @@
 import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Logo } from '../components/Logo';
-import { useCreateSubscriberMutation } from '../graphql/generated';
+import {
+  useCreateSubscriberMutation,
+  useGetSlugQuery,
+} from '../graphql/generated';
 
 export function Subscribe() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
-
+  const { data } = useGetSlugQuery()
   const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
   async function handleSubscribe(event: FormEvent) {
@@ -18,7 +21,9 @@ export function Subscribe() {
         email,
       },
     });
-    navigate('/event');
+    ;
+    if (data) navigate(`/event/lesson/${data.lessons[0].slug}`);
+    else navigate('/event');
   }
 
   return (
