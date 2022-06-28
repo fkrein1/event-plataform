@@ -10,7 +10,7 @@ export function Header() {
 
   return (
     <header className="w-full py-2 px-6 flex items-center justify-between md:justify-center bg-gray-700 border-b border-gray-600">
-      <div>
+      <div className="md:w-60 md:h-10 w-40 h-7">
         <Logo />
       </div>
       <div

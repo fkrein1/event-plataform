@@ -29,7 +29,9 @@ export function Subscribe() {
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex">
       <div className="flex flex-col mt-10 mx-10 sm:mx-40 gap-8 text-center items-center sm:text-left sm:items-start">
         <div className="max-w-[540px] flex flex-col items-center sm:items-start">
-          <Logo />
+          <div className="sm:w-60 sm:h-10 w-40 h-7">
+            <Logo />
+          </div>
           <h1 className="mt-8 text-[2.5rem] leading-tight">
             Checkout my{' '}
             <strong className="text-blue-500">favorite recipes</strong> from{' '}
