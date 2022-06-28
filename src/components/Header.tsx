@@ -19,7 +19,7 @@ export function Header() {
         })}
         onClick={() => setToggle(!toggle)}
       >
-        <span>Aulas</span>
+        <span>Classes</span>
         <ToggleOpen />
       </div>
       <div
@@ -28,7 +28,7 @@ export function Header() {
         })}
         onClick={() => setToggle(!toggle)}
       >
-        <span>Aulas</span>
+        <span>Classes</span>
         <ToggleClose />
       </div>
     </header>
