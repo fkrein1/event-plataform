@@ -10,7 +10,7 @@ export function Subscribe() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
-  const { data } = useGetSlugQuery()
+  const { data } = useGetSlugQuery();
   const [createSubscriber, { loading }] = useCreateSubscriberMutation();
 
   async function handleSubscribe(event: FormEvent) {
@@ -21,15 +21,14 @@ export function Subscribe() {
         email,
       },
     });
-    ;
     if (data) navigate(`/event/lesson/${data.lessons[0].slug}`);
     else navigate('/event');
   }
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex">
-      <div className="flex flex-col mt-10 mx-10 justify-items-center sm:mx-40 gap-8">
-        <div className="max-w-[540px] flex flex-col">
+      <div className="flex flex-col mt-10 mx-10 sm:mx-40 gap-8 text-center items-center sm:text-left sm:items-start">
+        <div className="max-w-[540px] flex flex-col items-center sm:items-start">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
             Checkout my{' '}
@@ -42,7 +41,7 @@ export function Subscribe() {
           </p>
         </div>
 
-        <div className="max-w-[390px] p-8 bg-gray-700 border border-gray-500 rounded">
+        <div className="sm:w-[390px] w-full p-8 bg-gray-700 border border-gray-500 rounded">
           <strong className="text-2xl mb-6 block">Register</strong>
           <form
             onSubmit={handleSubscribe}

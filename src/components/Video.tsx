@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import {
   CaretRight,
   FileArrowDown,
@@ -5,12 +6,15 @@ import {
   InstagramLogo,
   YoutubeLogo,
 } from 'phosphor-react';
+import { useContext } from 'react';
+import { MenuContext } from '../context/MenuContext';
 import { useGetLessonBySlugQuery } from '../graphql/generated';
 interface VideoProps {
   lessonSlug: string;
 }
 
 export function Video(props: VideoProps) {
+  const { toggle } = useContext(MenuContext);
   const { data } = useGetLessonBySlugQuery({
     variables: {
       slug: props.lessonSlug,
@@ -22,7 +26,10 @@ export function Video(props: VideoProps) {
   }
 
   return (
-    <div className="flex-1">
+    <div className={classNames("md:flex-1 md:block", {
+      'flex-1': !toggle,
+      'hidden': toggle,
+    })}>
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[900px] max-h-[70vh] aspect-video">
           <iframe
