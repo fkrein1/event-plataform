@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Logo } from '../components/Logo';
+import { Logo } from '../assets/Logo';
 import {
   useCreateSubscriberMutation,
   useGetSlugQuery,
@@ -28,7 +28,7 @@ export function Subscribe() {
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex">
-      <div className="flex flex-col mt-10 mx-40 gap-8">
+      <div className="flex flex-col mt-10 mx-10 justify-items-center sm:mx-40 gap-8">
         <div className="max-w-[540px] flex flex-col">
           <Logo />
           <h1 className="mt-8 text-[2.5rem] leading-tight">
