@@ -6,6 +6,8 @@ A React event application for pre-sale, releases, or creating an immersive exper
 Built with GraphCMS, GraphQL, Apolo, Tailwind, Codegen and Typescript.
 <br>
 <br>
-<a href="https://food-lab.vercel.app/">Demo</a> 
+<a href="https://food-lab.vercel.app/">Demo</a>
+<br>
+<br>
 <img src="./src/assets/food-lab.gif" alt="food lab" />
 <img src="./src/assets/food-lab.png" alt="food lab" />
